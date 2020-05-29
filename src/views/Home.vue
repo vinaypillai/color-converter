@@ -209,11 +209,12 @@
 </script>
 <style lang="scss" scoped>
     .main-content{
-        min-height: 100vh;
         padding: 2%;
         box-sizing: border-box;
         background-image: url("../assets/ag-square.png");
         background-blend-mode: exclusion;
+        align-content: center;
+        display: flex;
     }
     label{
         margin: 1% 0 0.5% 0;
