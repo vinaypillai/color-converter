@@ -4,7 +4,7 @@
             <ac-col cols="3" xl-cols="2" class="sidebar-wrapper">
                 <keep-alive :exclude="['ac-nav']">
                     <aside>
-                        <nav class="side-nav">
+                        <nav class="side-nav" v-if="!navToggle">
                             <ul>
                                 <li>
                                     <a @click="scrollTo('#installation')">Installation</a>
@@ -459,16 +459,30 @@
 <script type="text/javascript">
     export default {
         data(){
-            return {
+          return {
+            navShow:true,
+            navToggle:false,
+          }
+        },
 
-            }
+        mounted(){
+          window.addEventListener("resize",this.updateNav);
+          window.addEventListener("load",this.updateNav);
         },
         methods:{
             scrollTo(selector){
                 const el =document.querySelector(selector);
                 el.scrollIntoView();
                 document.documentElement.scrollTop -= 100;
-            }
+            },
+            updateNav(){
+                if(window.innerWidth>915){
+                  this.navShow=true;
+                  this.navToggle=false;
+                }else{
+                  this.navToggle=true;
+                }
+              }
         }
     }
 </script>
