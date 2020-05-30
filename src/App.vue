@@ -1,12 +1,6 @@
 <template>
   <div id="app">    
-    <ac-nav dark>
-      <ul class="nav--links">
-        <li><a href="/">Converter</a></li>
-        <li><a href="http://colors.acutecomponents.com">Themes</a></li>
-        <li><a href="/documentation">Documentation</a></li>
-      </ul>
-  </ac-nav>
+    <top-nav></top-nav>
     <router-view class="view"/>
   </div>
 </template>
@@ -23,3 +17,16 @@
   min-height: calc(100vh - 75px)
 }
 </style>
+<script type="text/javascript">
+  import topNav from "@/components/top-nav"
+  export default{
+    data(){
+      return {
+
+      }
+    },
+    components:{
+      "top-nav":topNav
+    }
+  }
+</script>

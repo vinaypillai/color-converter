@@ -187,6 +187,7 @@
         methods:{
             updateColor(mode){
                 this.initColor[mode] = this.currentColor[mode];
+                console.log(this.initColor);
                 this.updateCurrentColor();
             },
             updateCurrentColor(){
@@ -212,7 +213,7 @@
         padding: 2%;
         box-sizing: border-box;
         background-image: url("../assets/ag-square.png");
-        background-blend-mode: exclusion;
+        background-blend-mode: difference;
         align-content: center;
         display: flex;
     }

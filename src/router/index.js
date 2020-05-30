@@ -11,11 +11,17 @@ Vue.use(AcuteFramework)
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/documentation',
+    name: 'documentation',
+
+    component: () => import('../views/Documentation.vue')
   }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })
