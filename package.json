@@ -12,12 +12,7 @@
     "acute-framework": "^2.0.5",
     "babel-runtime": "^6.26.0",
     "core-js": "^3.6.5",
-    "highlight.js": "file:node_modules/highlight.js",
-    "highlightjs": "^9.16.2",
     "vue": "^2.6.11",
-    "vue-highlightjs": "^1.3.3",
-    "vue-markdown": "^2.2.4",
-    "vue-prism-editor": "^0.6.1",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
   },
