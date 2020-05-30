@@ -32,7 +32,7 @@
   export default{
     data(){
       return {
-        navShow:true,
+        navShow:false,
         navToggle:false,
       }
     },
